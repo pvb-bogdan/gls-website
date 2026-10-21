@@ -20,7 +20,7 @@ useReveal(root)
           :key="plan.title"
           data-reveal="up"
           :data-delay="i * 0.08"
-          class="relative flex flex-col rounded-[2rem] p-8 transition duration-500 hover:-translate-y-1"
+          class="relative flex flex-col rounded-[2rem] p-8 transition-[translate] duration-500 hover:-translate-y-1"
           :class="plan.featured ? 'bg-forest-900 text-white shadow-2xl shadow-forest-900/30' : 'border border-cream-200 bg-white'"
         >
           <span

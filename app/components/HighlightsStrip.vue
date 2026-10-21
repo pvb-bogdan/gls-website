@@ -13,7 +13,7 @@ useReveal(root)
         :key="h.title"
         data-reveal="up"
         :data-delay="i * 0.08"
-        class="group rounded-3xl border border-cream-200 bg-white p-6 shadow-[0_20px_50px_-30px_rgba(16,41,26,0.35)] transition duration-500 hover:-translate-y-1 hover:border-leaf-400/50"
+        class="group rounded-3xl border border-cream-200 bg-white p-6 shadow-[0_20px_50px_-30px_rgba(16,41,26,0.35)] transition-[translate,border-color] duration-500 hover:-translate-y-1 hover:border-leaf-400/50"
       >
         <span class="grid size-12 place-items-center rounded-2xl bg-forest-900 text-leaf-300 transition group-hover:bg-leaf-500 group-hover:text-white">
           <AppIcon :name="h.icon" :size="22" />
