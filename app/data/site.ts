@@ -145,8 +145,15 @@ export const videos = {
   eyebrow: 'Pe YouTube',
   title: 'Vezi cum lucrăm',
   text: 'Scurte filmări din șantier și sfaturi pentru grădina ta, direct de pe canalul lui Șerban.',
-  // TODO: ID-urile reale ale filmărilor scurte de pe @ionserban7492
-  shorts: [] as { id: string; title: string }[],
+  // TODO: titluri reale pentru fiecare filmare
+  shorts: [
+    { id: 'gmX-1dtQ4Sw', title: 'Din șantier: Grădina lui Șerban' },
+    { id: 'nYHQ9Jnb_rk', title: 'Din șantier: Grădina lui Șerban' },
+    { id: 'k60Zh-T7blE', title: 'Din șantier: Grădina lui Șerban' },
+    { id: 'AGIb1_uH4Xg', title: 'Din șantier: Grădina lui Șerban' },
+    { id: 'Oe-KYniAP_0', title: 'Din șantier: Grădina lui Șerban' },
+    { id: '-NjMOAaah6o', title: 'Din șantier: Grădina lui Șerban' },
+  ] as { id: string; title: string }[],
 }
 
 export const pricing = {
