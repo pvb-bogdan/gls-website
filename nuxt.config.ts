@@ -10,6 +10,8 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'ro' },
+      // clasa .js ascunde elementele animate înainte de prima randare, ca să nu clipească
+      script: [{ innerHTML: "document.documentElement.classList.add('js')" }],
       title: 'Grădina lui Șerban | Amenajări grădini și peisagistică în București',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

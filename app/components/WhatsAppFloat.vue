@@ -42,7 +42,7 @@ const open = ref(false)
       :aria-label="open ? 'Închide WhatsApp' : 'Scrie-ne pe WhatsApp'"
       @click="open = !open"
     >
-      <span v-if="!open" class="absolute inset-0 animate-ping rounded-full bg-wa opacity-30" />
+      <span v-if="!open" class="absolute inset-0 motion-safe:animate-ping rounded-full bg-wa opacity-30" />
       <AppIcon v-if="open" name="close" :size="26" />
       <BrandIcon v-else name="whatsapp" :size="32" />
     </button>

@@ -3,6 +3,5 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 export default defineNuxtPlugin(() => {
   gsap.registerPlugin(ScrollTrigger)
-  document.documentElement.classList.add('js')
   return { provide: { gsap, ScrollTrigger } }
 })

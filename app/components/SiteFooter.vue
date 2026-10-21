@@ -6,7 +6,7 @@ const socials = computed(() => [
   { name: 'facebook' as const, href: contact.social.facebook, label: 'Facebook' },
   { name: 'youtube' as const, href: contact.social.youtube, label: 'YouTube' },
   { name: 'instagram' as const, href: contact.social.instagram, label: 'Instagram' },
-])
+].filter((s) => s.href))
 const year = new Date().getFullYear()
 </script>
 

@@ -62,12 +62,11 @@ function open(index: number) {
         <p data-reveal="up" class="mt-5 text-forest-900/70">{{ projects.text }}</p>
       </div>
 
-      <div data-reveal="up" class="mt-10 flex flex-wrap justify-center gap-2" role="tablist" aria-label="Filtrează proiectele">
+      <div data-reveal="up" class="mt-10 flex flex-wrap justify-center gap-2" role="group" aria-label="Filtrează proiectele">
         <button
           v-for="c in projects.categories"
           :key="c"
-          role="tab"
-          :aria-selected="active === c"
+          :aria-pressed="active === c"
           class="rounded-full px-5 py-2.5 text-sm font-semibold transition"
           :class="active === c ? 'bg-forest-900 text-white' : 'bg-cream-100 text-forest-900 hover:bg-cream-200'"
           @click="active = c"

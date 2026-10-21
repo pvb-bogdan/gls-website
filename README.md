@@ -21,4 +21,4 @@ npm run generate   # site static în .output/public
 - **Texte, prețuri, contact, proiecte:** `app/data/site.ts`. Tot ce e marcat cu `TODO` trebuie confirmat cu Șerban.
 - **Secțiuni:** `app/components/*Section.vue`, asamblate în `app/pages/index.vue`
 - **Culori și fonturi:** `app/assets/css/main.css` (blocul `@theme`)
-- **Imagini:** `public/images/`. Hero-ul și imaginile generale sunt generate cu AI; `hero-alt-*.jpg` sunt variante de rezervă pentru hero. Pozele din galerie sunt provizorii și se înlocuiesc cu poze reale de pe Facebook.
+- **Imagini:** `public/images/`. Hero-ul și imaginile generale sunt generate cu AI; `hero-alt-*.jpg` sunt variante de rezervă pentru hero. Pozele din galerie sunt poze reale de pe pagina de Facebook.

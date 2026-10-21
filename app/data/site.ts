@@ -13,7 +13,7 @@ export const contact = {
   social: {
     facebook: 'https://www.facebook.com/gradinalui.serban/',
     youtube: 'https://www.youtube.com/@ionserban7492',
-    instagram: 'https://www.instagram.com/', // TODO: contul de Instagram
+    instagram: '', // TODO: contul de Instagram (iconița apare în footer doar dacă e completat)
   },
 }
 
