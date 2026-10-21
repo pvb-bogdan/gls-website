@@ -126,18 +126,26 @@ export type GalleryItem = { src: string; w: number; h: number; title: string; pl
 export const projects = {
   eyebrow: 'Proiecte',
   title: 'Grădini pe care le-am creat',
-  text: 'Câteva dintre lucrările noastre, din curți de case până la spații verzi pentru restaurante.',
-  categories: ['Toate', 'Grădini', 'Gazon', 'Alei', 'Comercial'],
-  // TODO: înlocuim cu poze reale de pe pagina de Facebook
+  text: 'Poze reale din lucrările noastre, de la primul rulou de gazon până la grădina terminată.',
+  categories: ['Toate', 'Gazon', 'Alei', 'Plantări', 'Din șantier'],
+  // Poze reale de pe pagina de Facebook. TODO: locațiile proiectelor
   items: [
-    { src: '/images/gallery-01.jpg', w: 1600, h: 900, title: 'Grădină cu alee din pietre, lângă lac', place: 'Snagov', category: 'Alei' },
-    { src: '/images/gallery-02.jpg', w: 1600, h: 900, title: 'Borduri cu plante perene', place: 'Ciofliceni', category: 'Grădini' },
-    { src: '/images/gallery-03.jpg', w: 1600, h: 900, title: 'Gazon rulou proaspăt montat', place: 'Ilfov', category: 'Gazon' },
-    { src: '/images/gallery-04.jpg', w: 1600, h: 900, title: 'Terasă verde pentru restaurant', place: 'Locanta Jariștea, București', category: 'Comercial' },
-    { src: '/images/gallery-05.jpg', w: 1600, h: 900, title: 'Grădină ecologică în dezvoltare', place: 'Cernica', category: 'Grădini' },
-    { src: '/images/gallery-06.jpg', w: 1600, h: 900, title: 'Alee din dale și pietriș alb', place: 'Giurgiu', category: 'Alei' },
-    { src: '/images/gallery-07.jpg', w: 1600, h: 900, title: 'Curte cu gazon și arbuști', place: 'Galați', category: 'Gazon' },
-    { src: '/images/gallery-08.jpg', w: 1600, h: 900, title: 'Grădină de vară cu lavandă', place: 'Snagov', category: 'Grădini' },
+    { src: '/images/project-01.jpg', w: 1600, h: 1200, title: 'Alee din dale și pietriș, cu gazon rulou', place: 'Lucrare finalizată', category: 'Alei' },
+    { src: '/images/project-02.jpg', w: 1600, h: 1200, title: 'Gazon rulou în jurul unei case noi', place: 'Lucrare finalizată', category: 'Gazon' },
+    { src: '/images/project-03.jpg', w: 1600, h: 1200, title: 'Gazon proaspăt montat lângă terasă', place: 'Lucrare finalizată', category: 'Gazon' },
+    { src: '/images/project-04.jpg', w: 1600, h: 1200, title: 'Palmieri și pietriș decorativ lângă piscină', place: 'Lucrare finalizată', category: 'Plantări' },
+    { src: '/images/project-05.jpg', w: 1600, h: 900, title: 'Alee cu dale, pietriș și gazon', place: 'Lucrare finalizată', category: 'Alei' },
+    { src: '/images/project-06.jpg', w: 1600, h: 1200, title: 'Echipa montând gazon rulou', place: 'În lucru', category: 'Din șantier' },
+    { src: '/images/project-07.jpg', w: 1600, h: 1200, title: 'Gazon rulou și arbori tineri', place: 'Lucrare finalizată', category: 'Gazon' },
+    { src: '/images/project-08.jpg', w: 1600, h: 1200, title: 'Arbori plantați pe aleea casei', place: 'Lucrare finalizată', category: 'Plantări' },
+    { src: '/images/project-09.jpg', w: 1600, h: 900, title: 'Alee din dale în gazon', place: 'Lucrare finalizată', category: 'Alei' },
+    { src: '/images/project-10.jpg', w: 1600, h: 1200, title: 'Gazon în livadă', place: 'Lucrare finalizată', category: 'Gazon' },
+    { src: '/images/project-11.jpg', w: 1600, h: 1200, title: 'Montaj pavaj', place: 'În lucru', category: 'Din șantier' },
+    { src: '/images/project-12.jpg', w: 1600, h: 1200, title: 'Palmieri lângă piscină', place: 'Lucrare finalizată', category: 'Plantări' },
+    { src: '/images/project-13.jpg', w: 1600, h: 1200, title: 'Grădină cu gazon și iederă', place: 'Lucrare finalizată', category: 'Gazon' },
+    { src: '/images/project-14.jpg', w: 1600, h: 1200, title: 'Rulouri de gazon gata de montaj', place: 'În lucru', category: 'Din șantier' },
+    { src: '/images/project-15.jpg', w: 1600, h: 1200, title: 'Plantare cu mulci și folie antiburuieni', place: 'În lucru', category: 'Plantări' },
+    { src: '/images/project-16.jpg', w: 1600, h: 1200, title: 'Plantare de arbuști', place: 'În lucru', category: 'Din șantier' },
   ] as GalleryItem[],
 }
 
