@@ -10,18 +10,18 @@ useReveal(root)
     <div class="container-x">
       <div class="relative isolate overflow-hidden rounded-[2.5rem] px-6 py-16 text-white sm:px-14 sm:py-20">
         <img src="/images/cta.jpg" alt="" class="absolute inset-0 -z-20 size-full object-cover" loading="lazy">
-        <div class="absolute inset-0 -z-10 bg-gradient-to-r from-forest-950/95 via-forest-950/80 to-forest-950/40" />
+        <div class="absolute inset-0 -z-10 bg-linear-to-r from-forest-950/95 via-forest-950/80 to-forest-950/40" />
 
         <div class="grid items-center gap-12 lg:grid-cols-[1.3fr_1fr]">
           <div>
             <h2 data-reveal="up" class="text-3xl leading-tight font-semibold sm:text-5xl">{{ cta.title }}</h2>
             <p data-reveal="up" class="mt-5 max-w-xl text-lg text-white/80">{{ cta.text }}</p>
             <div data-reveal="up" class="mt-9 flex flex-wrap gap-3">
-              <a :href="whatsappLink()" target="_blank" rel="noopener" class="btn-wa !px-7 !py-4 text-base">
+              <a :href="whatsappLink()" target="_blank" rel="noopener" class="btn-wa px-7! py-4! text-base">
                 <BrandIcon name="whatsapp" :size="20" />
                 {{ cta.button }}
               </a>
-              <a :href="contact.phoneHref" class="btn-ghost !px-7 !py-4 text-base">
+              <a :href="contact.phoneHref" class="btn-ghost px-7! py-4! text-base">
                 <AppIcon name="phone" :size="18" />
                 {{ contact.phoneDisplay }}
               </a>
@@ -29,7 +29,7 @@ useReveal(root)
           </div>
 
           <div data-reveal="right" class="rounded-3xl border border-white/15 bg-white/10 p-7 backdrop-blur-md">
-            <p class="eyebrow !text-leaf-300">{{ areas.eyebrow }}</p>
+            <p class="eyebrow text-leaf-300!">{{ areas.eyebrow }}</p>
             <p class="mt-3 font-serif text-2xl">{{ areas.title }}</p>
             <ul class="mt-6 flex flex-wrap gap-2">
               <li

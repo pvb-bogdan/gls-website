@@ -23,7 +23,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="acasa" ref="root" class="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-forest-950">
+  <section id="acasa" ref="root" class="relative isolate flex min-h-svh flex-col overflow-hidden bg-forest-950">
     <div ref="bg" class="absolute inset-0 -z-20 will-change-transform">
       <img
         src="/images/hero.jpg"
@@ -32,12 +32,12 @@ onMounted(() => {
         fetchpriority="high"
       >
     </div>
-    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-forest-950/90 via-forest-950/55 to-forest-950/10" />
-    <div class="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-forest-950/70 to-transparent" />
+    <div class="absolute inset-0 -z-10 bg-linear-to-r from-forest-950/90 via-forest-950/55 to-forest-950/10" />
+    <div class="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-linear-to-t from-forest-950/70 to-transparent" />
 
     <div class="container-x flex flex-1 flex-col justify-center pt-32 pb-40 sm:pb-48">
       <div class="max-w-2xl">
-        <p data-hero  class="eyebrow !text-leaf-300">{{ hero.eyebrow }}</p>
+        <p data-hero  class="eyebrow text-leaf-300!">{{ hero.eyebrow }}</p>
         <h1 data-hero  class="mt-5 text-4xl leading-[1.05] font-semibold text-white sm:text-6xl lg:text-7xl">
           {{ hero.titleStart }}
           <span class="block text-leaf-400 italic">{{ hero.titleAccent }}</span>
@@ -46,11 +46,11 @@ onMounted(() => {
           {{ hero.text }}
         </p>
         <div data-hero  class="mt-9 flex flex-wrap gap-3">
-          <a :href="whatsappLink()" target="_blank" rel="noopener" class="btn-wa !px-7 !py-4 text-base">
+          <a :href="whatsappLink()" target="_blank" rel="noopener" class="btn-wa px-7! py-4! text-base">
             <BrandIcon name="whatsapp" :size="20" />
             {{ hero.ctaPrimary }}
           </a>
-          <a href="#proiecte" class="btn-ghost !px-7 !py-4 text-base">
+          <a href="#proiecte" class="btn-ghost px-7! py-4! text-base">
             {{ hero.ctaSecondary }}
             <AppIcon name="arrow" :size="18" />
           </a>

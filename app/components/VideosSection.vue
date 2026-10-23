@@ -35,7 +35,7 @@ const placeholders = ['/images/service-lawn.jpg', '/images/service-irrigation.jp
             :key="v.id"
             data-reveal="up"
             :data-delay="(i % 3) * 0.08"
-            class="relative aspect-[9/16] overflow-hidden rounded-3xl bg-forest-900"
+            class="relative aspect-9/16 overflow-hidden rounded-3xl bg-forest-900"
             :class="i % 3 === 1 ? 'sm:translate-y-8' : ''"
           >
             <iframe
@@ -63,7 +63,7 @@ const placeholders = ['/images/service-lawn.jpg', '/images/service-irrigation.jp
             rel="noopener"
             data-reveal="up"
             :data-delay="i * 0.08"
-            class="group relative aspect-[9/16] overflow-hidden rounded-3xl"
+            class="group relative aspect-9/16 overflow-hidden rounded-3xl"
             :class="i % 2 ? 'sm:translate-y-8' : ''"
           >
             <img :src="src" alt="" class="size-full object-cover transition duration-700 group-hover:scale-110" loading="lazy">

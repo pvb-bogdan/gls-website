@@ -5,7 +5,7 @@ defineProps<{ flip?: boolean; color?: string }>() // flip = oglindire orizontalÄ
 
 <template>
   <svg
-    class="pointer-events-none block h-[60px] w-full sm:h-[90px] lg:h-[120px]"
+    class="pointer-events-none block h-15 w-full sm:h-22.5 lg:h-30"
     :class="flip ? '-scale-x-100' : ''"
     viewBox="0 0 1440 120"
     preserveAspectRatio="none"

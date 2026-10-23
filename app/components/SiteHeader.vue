@@ -44,7 +44,7 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
           <AppIcon name="phone" :size="18" />
           {{ contact.phoneDisplay }}
         </a>
-        <a :href="whatsappLink()" target="_blank" rel="noopener" class="btn-wa !py-2.5">
+        <a :href="whatsappLink()" target="_blank" rel="noopener" class="btn-wa py-2.5!">
           <BrandIcon name="whatsapp" :size="18" />
           WhatsApp
         </a>

@@ -33,16 +33,16 @@ const icons: Record<string, string> = {
           :key="s.key"
           data-reveal="up"
           :data-delay="(i % 3) * 0.08"
-          class="group relative flex flex-col overflow-hidden rounded-[2rem] bg-white shadow-[0_25px_60px_-40px_rgba(16,41,26,0.5)]"
+          class="group relative flex flex-col overflow-hidden rounded-4xl bg-white shadow-[0_25px_60px_-40px_rgba(16,41,26,0.5)]"
         >
-          <div class="relative aspect-[16/10] overflow-hidden">
+          <div class="relative aspect-16/10 overflow-hidden">
             <img
               :src="s.image"
               :alt="s.title"
               class="size-full object-cover transition duration-700 group-hover:scale-110"
               loading="lazy"
             >
-            <div class="absolute inset-0 bg-gradient-to-t from-forest-950/50 to-transparent" />
+            <div class="absolute inset-0 bg-linear-to-t from-forest-950/50 to-transparent" />
             <span class="absolute bottom-4 left-4 grid size-12 place-items-center rounded-2xl bg-white text-leaf-600 shadow-lg">
               <AppIcon :name="icons[s.key] ?? 'leaf'" :size="22" />
             </span>

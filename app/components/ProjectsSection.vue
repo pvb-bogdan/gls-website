@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import 'photoswipe/style.css'
+import type PhotoSwipeLightbox from 'photoswipe/lightbox'
 import { projects } from '~/data/site'
 
 const root = ref<HTMLElement | null>(null)
@@ -10,38 +11,39 @@ const items = computed(() =>
   active.value === 'Toate' ? projects.items : projects.items.filter((p) => p.category === active.value),
 )
 
-let lightbox: { init: () => void; destroy: () => void; loadAndOpen: (i: number) => void } | null = null
+let lightbox: PhotoSwipeLightbox | null = null
 
 onMounted(async () => {
-  const { default: PhotoSwipeLightbox } = await import('photoswipe/lightbox')
-  lightbox = new PhotoSwipeLightbox({
+  const { default: Lightbox } = await import('photoswipe/lightbox')
+  const lb = new Lightbox({
     dataSource: [],
     pswpModule: () => import('photoswipe'),
     bgOpacity: 0.94,
     showHideAnimationType: 'zoom',
-  }) as never
+  })
   // Legenda cu titlul și locația proiectului
-  ;(lightbox as any).on('uiRegister', () => {
-    ;(lightbox as any).pswp.ui.registerElement({
+  lb.on('uiRegister', () => {
+    lb.pswp?.ui?.registerElement({
       name: 'caption',
       order: 9,
       isButton: false,
       appendTo: 'root',
-      onInit: (el: HTMLElement, pswp: any) => {
+      onInit: (el, pswp) => {
         pswp.on('change', () => {
-          const s = pswp.currSlide.data
-          el.innerHTML = `<strong>${s.title}</strong><span>${s.place}</span>`
+          const s = pswp.currSlide?.data
+          if (s) el.innerHTML = `<strong>${s.title}</strong><span>${s.place}</span>`
         })
       },
     })
   })
-  lightbox!.init()
+  lb.init()
+  lightbox = lb
 })
 onBeforeUnmount(() => lightbox?.destroy())
 
 function open(index: number) {
   if (!lightbox) return
-  ;(lightbox as any).options.dataSource = items.value.map((p) => ({
+  lightbox.options.dataSource = items.value.map((p) => ({
     src: p.src,
     width: p.w,
     height: p.h,
@@ -77,7 +79,7 @@ function open(index: number) {
 
       <TransitionGroup
         tag="div"
-        class="mt-10 grid grid-flow-dense auto-rows-[220px] grid-cols-1 gap-4 sm:grid-cols-2 sm:auto-rows-[240px] lg:grid-cols-4"
+        class="mt-10 grid grid-flow-dense auto-rows-55 grid-cols-1 gap-4 sm:grid-cols-2 sm:auto-rows-60 lg:grid-cols-4"
         move-class="transition duration-500"
         enter-from-class="opacity-0 scale-95"
         enter-active-class="transition duration-500"
@@ -92,7 +94,7 @@ function open(index: number) {
           @click="open(i)"
         >
           <img :src="p.src" :alt="p.title" class="size-full object-cover transition duration-700 group-hover:scale-110" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-forest-950/10 to-transparent opacity-80 transition group-hover:opacity-100" />
+          <div class="absolute inset-0 bg-linear-to-t from-forest-950/80 via-forest-950/10 to-transparent opacity-80 transition group-hover:opacity-100" />
           <div class="absolute inset-x-0 bottom-0 translate-y-2 p-5 text-white transition duration-500 group-hover:translate-y-0">
             <p class="text-xs font-semibold tracking-wider text-leaf-300 uppercase">{{ p.place }}</p>
             <p class="mt-1 font-serif text-lg leading-snug">{{ p.title }}</p>
